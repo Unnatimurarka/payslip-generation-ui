@@ -1,6 +1,6 @@
 # Payslip Generation UI
 
-A responsive, React-based payslip generation application that simplifies employee payroll processing, salary calculations, payslip review, and distribution preparation.
+A responsive, React-based payslip generation application designed to simplify employee payroll processing, salary calculations, payslip review, and distribution preparation.
 
 ## Live Demo
 
@@ -23,9 +23,9 @@ The application uses mock employee data and performs payroll calculations on the
 ## Key Features
 
 ### 1. Employee Selection
-- Select a client.
-- Select an employee from the available employee list.
-- View employee information such as employee ID, designation, and joining date.
+- Select a client from the available client list.
+- Select an employee associated with the selected client.
+- View employee details such as employee ID, designation, and date of joining.
 
 ### 2. Payroll Inputs
 - Enter employee CTC and payroll details.
@@ -33,7 +33,7 @@ The application uses mock employee data and performs payroll calculations on the
 - Enter working days and leave days.
 - Configure professional tax, TDS, and advance deductions.
 - Enable or disable PF calculations.
-- Validate inputs before proceeding.
+- Validate payroll inputs before proceeding.
 
 ### 3. Payslip Review
 - Automatically calculate salary components.
@@ -46,9 +46,13 @@ The application uses mock employee data and performs payroll calculations on the
 - Review employee recipient information.
 - View payslip details before confirmation.
 - Prepare the payslip for distribution.
-- Display a confirmation and completion status.
+- Display confirmation and completion status.
 
-**Note:** Distribution is simulated on the frontend. The application does not send actual emails or perform backend delivery.
+### 5. Responsive Layout
+- Responsive interface designed to adapt to different screen sizes.
+- Layout adjustments for desktop, tablet, and mobile viewports.
+- Form fields, navigation, and payslip tables adapt to smaller screens.
+- Maintains readability and usability across different screen sizes.
 
 ## Salary Calculation
 
@@ -56,9 +60,9 @@ The application follows predefined payroll rules and salary components.
 
 | Salary Component | Calculation |
 |---|---|
-| Basic Salary | 40% |
-| HRA | 20% |
-| Medical Allowance | 10% |
+| Basic Salary | 40% of gross earnings |
+| HRA | 20% of gross earnings |
+| Medical Allowance | 10% of gross earnings |
 | Special Allowance | Remaining gross earnings |
 | Employee PF | ₹3,000 prorated based on paid days |
 | Employer PF | ₹3,000 prorated based on paid days |
@@ -67,7 +71,7 @@ The application follows predefined payroll rules and salary components.
 
 Salary is prorated based on paid days in the selected month.
 
-The application also calculates total deductions and net pay using the configured payroll inputs.
+The application calculates gross earnings, total deductions, and final net pay using the configured payroll inputs.
 
 ## Tech Stack
 
@@ -155,7 +159,11 @@ The test suite covers:
 - Payroll input validation.
 - Invalid and boundary input cases.
 
+**Testing Summary:** Both test suites passed during development, with 16 tests passing across two test files.
+
 ## Build for Production
+
+Run the following command to create a production build:
 
 ```bash
 npm run build
@@ -169,14 +177,8 @@ The production-ready files are generated in the `dist` directory.
 - Payroll calculations follow the predefined rules and constants provided for the assignment.
 - Salary calculations and validation are performed on the frontend.
 - No backend, database, or persistent payroll storage is integrated.
-- Distribution preparation is a frontend simulation; no actual email is sent.
-- This application is intended as an assignment demonstration and not a production payroll system.
-
-## Testing Summary
-
-The project includes separate unit test files for salary calculations and input validation.
-
-Both test suites passed during development, with 16 tests passing across the two test files.
+- Distribution preparation is simulated on the frontend; no actual email is sent.
+- This application is developed as an assignment demonstration and is not intended to replace a production payroll system.
 
 ---
 
