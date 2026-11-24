@@ -1,16 +1,110 @@
-# React + Vite
+# Payslip Generation UI
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A React-based payslip generation application designed to simplify the process of preparing employee payslips using payroll inputs and predefined salary calculation rules.
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+This project provides a user-friendly interface for selecting employees, entering payroll details, calculating salary components, and reviewing payslip information.
 
-## React Compiler
+It uses mock employee data and performs calculations on the frontend without requiring a backend.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the Oxlint configuration
+- Employee and client selection
+- Payroll input form with validation
+- Salary calculation based on CTC and paid days
+- Automatic calculation of Basic Salary, HRA, Medical Allowance, and Special Allowance
+- Employee and employer PF calculations
+- TDS, advance, and professional tax deductions
+- Payslip preview with earnings, deductions, and net pay
+- Responsive user interface
+- Unit tests for salary calculations and input validation
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## Tech Stack
+
+- React
+- JavaScript
+- Vite
+- CSS
+- Vitest
+
+## Salary Calculation
+
+The application uses predefined salary components and payroll rules to calculate:
+
+- Gross Earnings
+- Employee PF
+- Employer PF
+- Total Deductions
+- Net Pay
+
+Salary is prorated based on paid days in the selected month.
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js
+- npm
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone YOUR_GITHUB_REPOSITORY_URL
+   ```
+
+2. Navigate to the project folder:
+
+   ```bash
+   cd payslip-generation-ui
+   ```
+
+3. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+4. Start the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+5. Open the local URL displayed in your terminal.
+
+## Running Tests
+
+Run the unit tests using:
+
+```bash
+npm test
+```
+
+## Project Structure
+
+```text
+src/
+├── data/
+│   └── mockData.js
+├── tests/
+│   ├── calculatePayslip.test.js
+│   └── validate.test.js
+├── utils/
+│   ├── calculatePayslip.js
+│   ├── constants.js
+│   └── validate.js
+├── App.jsx
+├── App.css
+└── index.css
+```
+
+## Project Scope
+
+This is a frontend assignment developed using mock data. It does not include backend integration, database storage, or actual email delivery.
+
+---
+
+**Developed as a Payslip Generation UI assignment.**
