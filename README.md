@@ -52,7 +52,7 @@ Salary is prorated based on paid days in the selected month.
 1. Clone the repository:
 
    ```bash
-   git clone YOUR_GITHUB_REPOSITORY_URL
+   git clone https://github.com/Unnatimurarka/payslip-generation-ui.git
    ```
 
 2. Navigate to the project folder:
