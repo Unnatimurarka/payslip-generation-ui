@@ -1,0 +1,14 @@
+
+export const PAYSLIP_CONSTANTS = {
+  PT_DEFAULT: 200,
+  INSURANCE_FUND: 700,
+  EMPLOYEE_PF_BASE: 3000,
+  EMPLOYER_PF_BASE: 3000,
+
+  EARNINGS_SPLIT: {
+    BASIC: 0.4,
+    HRA: 0.2,
+    MEDICAL: 0.1,
+  },
+};
+
